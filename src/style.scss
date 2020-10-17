@@ -1,0 +1,35 @@
+$primary-font-color: #000000;
+$secondary-font-color: #838383;
+$transition: all 200ms ease;
+$active-color: #f6630a;
+$hover-color: #d85506;
+$primary-color: #3a745f;
+$main-shadow: 0 6px 15px 2px #e9e9e9;
+$great-tab-border: 1px solid #e8e8e8;
+
+h1{
+    font-family: 'ProximaNova-ExtraBold', sans-serif;
+        max-width: 375px;
+        font-size: 3.5em;
+        line-height: 1.24;
+        margin-bottom: 140px;
+}
+h2{
+    font-family: 'ProximaNova-ExtraBold', sans-serif;
+    font-size: 2.875em;
+    line-height: 1.2;
+}
+h3{
+    font-family: 'ProximaNova-Bold',sans-serif;
+    font-size: 1.5em;
+    line-height: 1.25;
+} 
+
+
+@import 'scss/fonts';
+@import 'scss/global';
+@import 'scss/common';
+@import 'scss/slick';
+@import 'scss/slick-theme';
+@import 'scss/adaptive';
+

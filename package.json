@@ -1,0 +1,26 @@
+{
+  "name": "anticor",
+  "version": "1.0.1",
+  "description": "Лендинг по антикор (Автопрофи)",
+  "main": "index.html",
+  "scripts": {
+    "start": "browser-sync start --server src --no-notify --no-ui --cwd src --files *.html,css/**/*,js/**/*",
+    "test": "editorconfig-checker",
+    "html": "html-minifier --remove-comments --collapse-whitespace --input-dir src --output-dir dist --file-ext html",
+    "styles": "postcss src/css/main.css --use postcss-import --use postcss-csso --no-map --output dist/css/style.css",
+    "imgcopy": "xcopy src\\img dist\\img /H /Y /C /R /S /I",
+    "build": "npm run html && npm run styles && npm run imgcopy",
+    "deploy": "cd dist && scp -r /dist asmi-studio@asmi-studio.myjino.ru:domains/asmi-studio.myjino.ru/"
+  },
+  "keywords": [
+    "web",
+    "html"
+  ],
+  "author": "Asmi-Studio",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "editorconfig-checker": "^3.1.0",
+    "html-minifier": "*"
+  }
+}
