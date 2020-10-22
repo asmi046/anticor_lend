@@ -4,13 +4,17 @@
   "description": "Лендинг по антикор (Автопрофи)",
   "main": "index.html",
   "scripts": {
-    "start": "browser-sync start --server src --no-notify --no-ui --cwd src --files *.html,css/**/*,js/**/*",
+    "start": "browser-sync start --server src --no-notify --no-ui --cwd src --files *.css,*.html,css/**/*,js/**/*",
+    "startdst": "browser-sync start --server dst --no-notify --no-ui --cwd dst --files *.css,*.html,css/**/*,js/**/*",
     "test": "editorconfig-checker",
-    "html": "html-minifier --remove-comments --collapse-whitespace --input-dir src --output-dir dist --file-ext html",
-    "styles": "postcss src/css/main.css --use postcss-import --use postcss-csso --no-map --output dist/css/style.css",
-    "imgcopy": "xcopy src\\img dist\\img /H /Y /C /R /S /I",
-    "build": "npm run html && npm run styles && npm run imgcopy",
-    "deploy": "cd dist && scp -r /dist asmi-studio@asmi-studio.myjino.ru:domains/asmi-studio.myjino.ru/"
+    "html": "html-minifier --remove-comments --collapse-whitespace --input-dir src --output-dir dst --file-ext html",
+    "styles": "postcss src/style.css --use postcss-csso --no-map --output dst/style.css",
+    "imgcopy": "scp -r src/img dst/img",
+    "jscopy": "scp -r src/js dst/js",
+    "asestcopy": "scp -r src/assets dst/assets",
+    "sendercopy": "scp -r src/sender dst/sender",
+    "build": "npm run html && npm run styles && npm run imgcopy && npm run jscopy && npm run asestcopy && npm run sendercopy",
+    "deploy": "cd dst && scp -r * zaharoyl_all@zaharoyl.beget.tech:antikor46.ru/public_html/"
   },
   "keywords": [
     "web",
