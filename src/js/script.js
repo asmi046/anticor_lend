@@ -135,16 +135,20 @@ $(function () {
     
 //    первый таб
     $carConrtolElements.bind('click', function(e){  
-        if($(window).outerWidth() > mainWidtSize){
-            let currentIndex = $(this).index();
-            $(this).siblings().removeClass('active');
-            $(this).addClass('active'); 
-            let $displayElementsLevel = $(this).parent().next().children();
+        let currentIndex = $(this).index();
+        let $displayElementsLevel = $(this).parent().next().children();
+        
+        
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $displayElementsLevel.eq(currentIndex).removeClass('active');
+        } else {
+            $(".car-services .avto-tab__control__item").removeClass("active");
             $displayElementsLevel.removeClass('active');
-            $displayElementsLevel.eq(currentIndex).addClass('active'); 
-        }else{
-            $(this).toggleClass('active');
-            $(this).children('ul').slideToggle(200);
+            
+            $(this).addClass("active");
+            $displayElementsLevel.eq(currentIndex).addClass('active');
         }
         
     });
@@ -152,17 +156,23 @@ $(function () {
 
 //    второй таб
     $truckConrtolElements.bind('click', function(e){  
-        if($(window).outerWidth() > mainWidtSize){
-            let currentIndex = $(this).index();
-            $(this).siblings().removeClass('active');
-            $(this).addClass('active'); 
-            let $displayElementsLevel = $(this).parent().next().children();
+        
+        let currentIndex = $(this).index();
+        let $displayElementsLevel = $(this).parent().next().children();
+        
+        
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $displayElementsLevel.eq(currentIndex).removeClass('active');
+        } else {
+            $(".truck-services .avto-tab__control__item").removeClass("active");
             $displayElementsLevel.removeClass('active');
-            $displayElementsLevel.eq(currentIndex).addClass('active'); 
-        }else{
-            $(this).toggleClass('active');
-            $(this).children('ul').slideToggle(200);
+            
+            $(this).addClass("active");
+            $displayElementsLevel.eq(currentIndex).addClass('active');
         }
+    
 
     });
 
@@ -188,7 +198,7 @@ $(function () {
         
         jqXHR.done(function (responce) {
             console.log(responce);
-            alert("Ваше сообщение отправлено!");
+            document.location.href = "https://antikor46.ru/thencs.html";
             jQuery('.request__form input[name=tel]').val("");	
             jQuery('.request__form input[name=name]').val("");
             jQuery('.request__form input[name=email]').val("");
