@@ -143,12 +143,16 @@ $(function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
             $displayElementsLevel.eq(currentIndex).removeClass('active');
+
+            $(this).find("ul").hide();
         } else {
             $(".car-services .avto-tab__control__item").removeClass("active");
             $displayElementsLevel.removeClass('active');
             
             $(this).addClass("active");
             $displayElementsLevel.eq(currentIndex).addClass('active');
+            
+            $(this).find("ul").show();
         }
         
     });
@@ -165,12 +169,14 @@ $(function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
             $displayElementsLevel.eq(currentIndex).removeClass('active');
+            $(this).find("ul").hide();
         } else {
             $(".truck-services .avto-tab__control__item").removeClass("active");
             $displayElementsLevel.removeClass('active');
             
             $(this).addClass("active");
             $displayElementsLevel.eq(currentIndex).addClass('active');
+            $(this).find("ul").show();
         }
     
 
