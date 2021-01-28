@@ -12,7 +12,7 @@ h2 {
   line-height: 1.2; }
 
 h3 {
-  font-family: 'ProximaNova-Bold',sans-serif;
+  font-family: 'ProximaNova-Bold',sans-serif; 
   font-size: 1.5em;
   line-height: 1.25; }
 
@@ -572,9 +572,10 @@ section h2 {
     height: 70px;
     background-color: #3a745f;
     border-bottom-right-radius: 21px;
-    background-image: url(img/logo.png);
+    background-image: url(img/logo.svg);
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
     margin-right: 2.7%; }
   .nav-panel a {
     transition: all 200ms ease; }
