@@ -12,7 +12,7 @@ h2 {
   line-height: 1.2; }
 
 h3 {
-  font-family: 'ProximaNova-Bold',sans-serif; 
+  font-family: 'ProximaNova-Bold',sans-serif;  
   font-size: 1.5em;
   line-height: 1.25; }
 
@@ -351,7 +351,8 @@ header, nav, section, article, aside, footer, main {
   z-index: 10; }
 
 .cover {
-  background-position: center center;
+  /*background-position: center center;*/
+  background-position: 0% 0%;
   background-repeat: no-repeat;
   background-size: cover; }
 
