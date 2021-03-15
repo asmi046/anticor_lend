@@ -4,7 +4,7 @@ h1 {
   max-width: 375px;
   font-size: 3.5em;
   line-height: 1.24;
-  margin-bottom: 140px; }
+  margin-bottom: 140px; } 
 
 h2 {
   font-family: 'ProximaNova-ExtraBold', sans-serif;
@@ -351,8 +351,8 @@ header, nav, section, article, aside, footer, main {
   z-index: 10; }
 
 .cover {
-  /*background-position: center center;*/
-  background-position: 0% 0%;
+  background-position: center center;
+  /*background-position: 0% 0%;*/
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -1081,7 +1081,7 @@ section.contacts {
   height: 262px; }
 
 .service-desk__box {
-  /*position: absolute;*/
+  position: absolute;
   width: 100%;
   bottom: 71px;
   bottom: 4.3em;
@@ -1123,7 +1123,7 @@ section.contacts {
         background-image: url(img/birka.png); }
 
 .price-catalog {
-  padding-top: 100px;
+  /*padding-top: 100px;*/
   padding-bottom: 80px; }
   .price-catalog h2 {
     margin-bottom: 35px; }
@@ -1493,8 +1493,8 @@ section.contacts {
   .service-sl-section .control-panel {
     bottom: 9em; } }
 @media screen and (max-width: 999px) {
-  .price-catalog {
-    padding-top: 0; }
+/*  .price-catalog {
+    padding-top: 0; }*/
   .mobil {
     display: block; }
 
@@ -1788,7 +1788,7 @@ section.contacts {
     font-size: 1.1em;
     min-width: 95px; } }
 
-@media screen and (max-width: 420px) {
+/*@media screen and (max-width: 420px) {
 .service-sl-section .service-sl__item .spacer {
     min-height: 327px;
   }
@@ -1798,6 +1798,6 @@ section.contacts {
 .service-sl-section .service-sl__item .spacer {
     min-height: 300px;
   }
-}
+}*/
 
 /*# sourceMappingURL=style.css.map */
